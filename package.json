@@ -1,0 +1,19 @@
+{
+  "name": "oauth2_helper",
+  "version": "1.0.0",
+  "description": "helps you to gain a CODE and redeem TOKENS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuson/oauth2_helper.git"
+  },
+  "author": "nevermoi <wglq@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuson/oauth2_helper/issues"
+  },
+  "homepage": "https://github.com/shuson/oauth2_helper#readme"
+}
