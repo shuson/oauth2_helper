@@ -16,11 +16,12 @@
     
     header {
       background-color: lightgray;
-      padding: 3px;
+      padding: 5px;
+      margin-bottom: 10px;
     }
     
     input {
-      width: 300px;
+      width: 500px;
     }
     
     h2 {
@@ -39,6 +40,15 @@
       margin-top: 5px;
       margin-left: 5px;
     }
+
+    p {
+      display: table-row;
+    }
+
+    p input, p label, p textarea {
+      display: table-cell;
+      margin: 5px;
+    }
   </style>
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -55,22 +65,22 @@
       <div id="step1" class="col-md-8 step">
         <h2>Step 1: Authorize APIs for a CODE</h2>
         <p>
-          <label for="code_endpoint">API endpoint:</label>
-          <input id="code_endpoint" placeholder="https://www.googleapis.com/auth2/authorize" />
+          <label for="code_endpoint">Authorize endpoint:</label>
+          <input id="code_endpoint" />
         </p>
         <p>
           <label for="auth_app_id">Client Id:</label>
-          <input id="auth_app_id" placeholder="123cbd-321abc..." />
+          <input id="auth_app_id" />
         </p>
         <p>
           <label for="redirect_uri1">Redirect Uri:</label>
-          <input id="redirect_uri1" placeholder="http://localhost/authen" />
+          <input id="redirect_uri1"/>
         </p>
         <p>
           <label for="auth_scope">Scope:</label>
-          <input id="auth_scope" placeholder="offline_access" />
+          <input id="auth_scope" />
         </p>
-        <p><button id="step1_generate" class="btn btn-default pull-right" href="#" role="button">Generate URI</button></p>
+        <button id="step1_generate" class="btn btn-default pull-right" href="#" role="button">Generate URI</button>
       </div>
       <div id="stepend1" class="col-md-2 stepend">
       </div>
@@ -80,34 +90,34 @@
         <h2>Step 2: Redeem Tokens</h2>
         <form id="token_form" method="POST">
           <p>
-            <label for="token_endpoint">API endpoint:</label>
-            <input id="token_endpoint" placeholder="https://www.googleapis.com/auth2/token" />
+            <label for="token_endpoint">Token endpoint:</label>
+            <input id="token_endpoint" />
           </p>
           <p>
             <label for="auth_code">Auth Code:</label>
-            <textarea id="auth_code" name="code"></textarea>
+            <textarea id="auth_code" name="code" cols="76" rows="8"></textarea>
           </p>
           <p>
             <label for="token_app_id">Client Id:</label>
-            <input id="token_app_id" name="client_id" placeholder="123cbd-321abc..." />
+            <input id="token_app_id" name="client_id" />
           </p>
           <p>
             <label for="token_app_secret">Client Secret:</label>
-            <input id="token_app_secret" name="client_secret" placeholder="1x$bd=3Q/1PPe..." />
+            <input id="token_app_secret" name="client_secret" />
           </p>
           <p>
             <label for="redirect_uri2">Redirect Uri:</label>
-            <input id="redirect_uri2" name="redirect_uri" placeholder="http://localhost/authen" />
+            <input id="redirect_uri2" name="redirect_uri" />
           </p>
           <p>
             <label for="grant_type">Grant Type:</label>
-            <input id="grant_type" name="grant_type" placeholder="token" />
+            <input id="grant_type" name="grant_type" />
           </p>
           <p>
             <label for="token_scope">Scope:</label>
-            <input id="token_scope" name="scope" placeholder="offline_access" />
+            <input id="token_scope" name="scope" />
           </p>
-          <p><button id="step2_exchange" class="btn btn-default pull-right" role="button">Exchange Tokens</button></p>
+          <button id="step2_exchange" class="btn btn-default pull-right" role="button">Exchange Tokens</button>
         </form>
       </div>
       <div id="stepend2" class="col-md-2 stepend">

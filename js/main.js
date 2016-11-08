@@ -27,6 +27,8 @@ $(function () {
 
         var result = tpl.format(code_endpoint, app_id, redirect_uri, scope);
         
+        $("#stepend1").empty();
+
         $("<textarea></textarea>")
         .attr("wrap", "soft")
         .attr("cols", "50")
