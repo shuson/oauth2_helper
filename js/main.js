@@ -20,11 +20,6 @@ $(function () {
         var redirect_uri = $("#redirect_uri1").val();
         var scope = $("#auth_scope").val();
 
-        if(!code_endpoint || !app_id || !redirect_uri || !scope) {
-            alert("all fields must not be empty");
-            return false;
-        }
-
         var result = tpl.format(code_endpoint, app_id, redirect_uri, scope);
         
         $("#stepend1").empty();
@@ -50,11 +45,6 @@ $(function () {
         var grant_type = $("#grant_type").val();
         var redirect_uri = $("#redirect_uri2").val();
         var scope = $("#token_scope").val();
-
-        if(!token_endpoint || !code || !app_id || !app_secret || !redirect_uri || !scope) {
-            alert("all fields must not be empty");
-            return false;
-        }
 
         $("#token_form").attr("action", token_endpoint).submit();
     });
